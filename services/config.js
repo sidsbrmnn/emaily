@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const {
   COOKIE_KEY,
   GOOGLE_CLIENT_ID,
