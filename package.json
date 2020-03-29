@@ -1,0 +1,31 @@
+{
+  "name": "emaily",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^2.0.2"
+  },
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidsbrmnn/emaily.git"
+  },
+  "keywords": [],
+  "author": "Siddharth Subramanian <sidsbrmnn@gmail.com> (https://sidsbrmnn.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sidsbrmnn/emaily/issues"
+  },
+  "homepage": "https://github.com/sidsbrmnn/emaily#readme"
+}
