@@ -1,8 +1,6 @@
-const cookieSession = require("cookie-session");
 const dotenv = require("dotenv");
 const express = require("express");
 const mongoose = require("mongoose");
-const passport = require("passport");
 
 require("./services/error");
 
@@ -27,19 +25,7 @@ mongoose
 
 require("./services/auth");
 
-const COOKIE_KEY = process.env.COOKIE_KEY || "some_key";
-app.use(
-  cookieSession({
-    maxAge: 30 * 24 * 60 * 60 * 1000,
-    keys: [COOKIE_KEY],
-  })
-);
-
-app.use(passport.initialize());
-app.use(passport.session());
-
-app.use("/api", require("./routes/api"));
-app.use("/auth", require("./routes/auth"));
+require("./services/routes")(app);
 
 const PORT = parseInt(process.env.PORT, 10) || 3000;
 app.listen(PORT, () => {
