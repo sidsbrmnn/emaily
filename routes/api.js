@@ -4,7 +4,7 @@ const apiRouter = express.Router();
 
 apiRouter.get("/logout", (req, res) => {
   req.logout();
-  res.send(req.user);
+  res.redirect("/");
 });
 
 apiRouter.get("/me", (req, res) => {
