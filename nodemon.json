@@ -1,0 +1,7 @@
+{
+  "ignore": ["client"],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js"
+}
