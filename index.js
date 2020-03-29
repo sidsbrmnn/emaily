@@ -7,6 +7,9 @@ const passport = require("passport");
 require("./services/error");
 
 dotenv.config();
+
+require("./services/config");
+
 const app = express();
 
 const MONGODB_URI =
