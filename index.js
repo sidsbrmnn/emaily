@@ -17,14 +17,7 @@ passport.use(
   )
 );
 
-app.get(
-  "/auth/google",
-  passport.authenticate("google", {
-    scope: ["profile", "email"],
-  })
-);
-
-app.get("/auth/google/callback", passport.authenticate("google"));
+app.use("/auth", require("./routes/auth"));
 
 const PORT = parseInt(process.env.PORT, 10) || 3000;
 app.listen(PORT, () => {
