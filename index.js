@@ -4,6 +4,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const passport = require("passport");
 
+require("./services/error");
+
 dotenv.config();
 const app = express();
 
