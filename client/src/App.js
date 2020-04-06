@@ -16,11 +16,9 @@ class App extends Component {
   render() {
     return (
       <HashRouter>
-        <Layout>
           <Switch>
             <Route path="/" exact component={IndexPage} />
           </Switch>
-        </Layout>
       </HashRouter>
     );
   }
