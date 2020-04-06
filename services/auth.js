@@ -27,7 +27,12 @@ passport.use(
       try {
         let user = await User.findOne({ googleId: profile.id });
         if (!user) {
-          let user = new User({ googleId: profile.id });
+          let user = new User({
+            googleId: profile.id,
+            name: profile.displayName,
+            email: profile.emails[0].value,
+            photo: profile.photos[0].value,
+          });
           await user.save();
         }
 
