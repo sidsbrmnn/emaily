@@ -4,7 +4,7 @@ import { HashRouter, Switch, Route } from "react-router-dom";
 
 import * as actions from "./actions";
 import IndexPage from "./pages/index";
-import Layout from "./components/Layout";
+import SurveysPage from "./pages/surveys";
 
 class App extends Component {
   state = {};
@@ -16,9 +16,10 @@ class App extends Component {
   render() {
     return (
       <HashRouter>
-          <Switch>
-            <Route path="/" exact component={IndexPage} />
-          </Switch>
+        <Switch>
+          <Route path="/" exact component={IndexPage} />
+          <Route path="/surveys" exact component={SurveysPage} />
+        </Switch>
       </HashRouter>
     );
   }
