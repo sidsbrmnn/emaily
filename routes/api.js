@@ -2,9 +2,9 @@ const express = require("express");
 
 const apiRouter = express.Router();
 
-apiRouter.get("/logout", (req, res) => {
+apiRouter.post("/logout", (req, res) => {
   req.logout();
-  res.redirect("/");
+  res.send(req.user);
 });
 
 apiRouter.get("/me", (req, res) => {
