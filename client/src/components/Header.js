@@ -1,7 +1,7 @@
+import PropTypes from "prop-types";
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import { NavLink, Link } from "react-router-dom";
-import { CSSTransition } from "react-transition-group";
+import { NavLink } from "react-router-dom";
+import ProfileSettings from "./ProfileSettings";
 
 class Header extends Component {
   state = {
@@ -67,46 +67,15 @@ class Header extends Component {
         >
           <img
             className="h-8 w-8 rounded-full"
-            src={this.props.auth ? this.props.auth.photo : ""}
+            src={this.props.user.photo}
             alt=""
           />
         </button>
         {expandProfile ? (
-          <CSSTransition
-            in={expandProfile}
-            timeout={100}
-            classNames={{
-              enter: "transition ease-out duration-100",
-              enterActive: "transform opacity-0 scale-95",
-              enterDone: "transform opacity-100 scale-100",
-              exit: "transition ease-in duration-75",
-              exitActive: "transform opacity-100 scale-100",
-              exitDone: "transform opacity-0 scale-95",
-            }}
-          >
-            <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg">
-              <div className="py-1 rounded-md bg-white shadow-xs">
-                <Link
-                  to="/profile"
-                  className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-                >
-                  Your Profile
-                </Link>
-                <Link
-                  to="/settings"
-                  className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-                >
-                  Settings
-                </Link>
-                <a
-                  href="/api/logout"
-                  className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-                >
-                  Sign out
-                </a>
-              </div>
-            </div>
-          </CSSTransition>
+          <ProfileSettings
+            toggleProfile={this.toggleProfile}
+            inProp={expandProfile}
+          />
         ) : null}
       </>
     );
@@ -180,8 +149,8 @@ class Header extends Component {
   }
 }
 
-function mapStateToProps({ auth }) {
-  return { auth };
-}
+Header.propTypes = {
+  user: PropTypes.object.isRequired,
+};
 
-export default connect(mapStateToProps)(Header);
+export default Header;
