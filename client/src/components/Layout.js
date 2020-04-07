@@ -3,10 +3,10 @@ import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Layout = ({ home, children }) => {
+const Layout = ({ children, auth }) => {
   return (
     <>
-      <Header home={home} />
+      {auth ? <Header user={auth} /> : null}
 
       <main>{children}</main>
 
