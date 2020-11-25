@@ -76,6 +76,9 @@ const Landing: FunctionComponent = () => {
                                             role="button"
                                             className="flex items-center justify-center p-2 text-gray-500 transition border border-gray-300 rounded-md shadow-sm hover:text-gray-700"
                                         >
+                                            <span className="sr-only">
+                                                Facebook
+                                            </span>
                                             <svg
                                                 fill="currentColor"
                                                 viewBox="0 0 512 512"
