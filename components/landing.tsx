@@ -93,7 +93,21 @@ const Landing: FunctionComponent = () => {
                                         <span
                                             role="button"
                                             className="flex items-center justify-center p-2 text-gray-500 transition border border-gray-300 rounded-md shadow-sm hover:text-gray-700"
-                                        ></span>
+                                        >
+                                            <span className="sr-only">
+                                                Twitter
+                                            </span>
+                                            <svg
+                                                fill="currentColor"
+                                                viewBox="0 0 512 416.32"
+                                                className="w-5 h-5"
+                                            >
+                                                <path
+                                                    fillRule="evenodd"
+                                                    d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9.01-.2-13.52 20.49-14.75 38.31-33.4 52.45-54.5-18.85 8.4-39.13 13.93-60.44 16.6 21.72-12.91 38.31-33.6 46.3-58.19-20.28 12.09-42.82 20.69-66.79 25.41C411.81 12.7 384.56 0 354.45 0c-57.98 0-105.1 47.12-105.1 105.1 0 8.2 1.02 16.19 2.66 23.97-87.28-4.3-164.73-46.3-216.56-109.82-9.01 15.57-14.14 33.6-14.14 52.86 0 36.47 18.64 68.64 46.71 87.48a106.24 106.24 0 01-47.53-13.11v1.43c0 50.81 36.26 93.43 84.21 103.06-8.81 2.46-18.03 3.69-27.66 3.69-6.76 0-13.32-.61-19.67-1.84 13.32 41.8 52.24 72.12 98.14 72.94-36.06 28.28-81.34 45.08-130.51 45.08-8.4 0-16.8-.41-25-1.43 46.3 29.5 101.62 46.91 160.83 46.91"
+                                                ></path>
+                                            </svg>
+                                        </span>
                                         <span
                                             role="button"
                                             className="flex items-center justify-center p-2 text-gray-500 transition border border-gray-300 rounded-md shadow-sm hover:text-gray-700"
